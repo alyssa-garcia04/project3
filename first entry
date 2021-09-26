@@ -1,0 +1,19 @@
+import urllib.request    
+urllib.request.urlretrieve("https://s3.amazonaws.com/tcmg476/http_access_log", "info.txt")
+import shutil
+shutil.copyfile('info.txt', 'info2.txt')
+with open('info2.txt') as f:
+   for index, line in enumerate(f):
+     with open("info2.txt",'r') as data_file:
+      for line in data_file:
+        data = line.split()
+import datefinder
+file = open("info2.txt",'r')
+content = file.read()
+matches = list(datefinder.find_dates(content))
+if len(matches) > 0:
+    for date in matches:
+      print(len(matches))
+    else:
+      print("Found no dates.")
+file.close()
