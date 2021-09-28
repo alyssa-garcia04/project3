@@ -1,3 +1,4 @@
+#this code does not work. it was my first attempt and project_code is the correct file.
 import urllib.request    
 urllib.request.urlretrieve("https://s3.amazonaws.com/tcmg476/http_access_log", "info.txt")
 import shutil
@@ -17,3 +18,4 @@ if len(matches) > 0:
     else:
       print("Found no dates.")
 file.close()
+#this code does not work. it was my first attempt and project_code is the correct file.
