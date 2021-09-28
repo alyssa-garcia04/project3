@@ -1,0 +1,4 @@
+import urllib.request    
+urllib.request.urlretrieve("https://s3.amazonaws.com/tcmg476/http_access_log", "info.txt")
+import shutil
+shutil.copyfile('info.txt', 'info2.txt')
